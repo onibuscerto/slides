@@ -11,13 +11,21 @@
 \institute{Universidade Tecnológica Federal do Paraná}
 \date{\today}
 
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{\insertsectionhead}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
 \begin{document}
 
 \frame{\titlepage}
 
 \section{}
-\frame{\tableofcontents}
 
 \input{introducao.tex}
+\input{metodologia.tex}
 
 \end{document}
