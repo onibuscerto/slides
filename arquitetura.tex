@@ -116,5 +116,21 @@ Servlets responsáveis por executar consultas na base de dados construída atrav
 \frame
 {
 \frametitle{Cliente \emph{Web}}
+Página \emph{web} em JavaScript (jQuery) que recolhe e envia ao \emph{Web Service} as seguintes informações do usuário (HTTP POST):
+\begin{itemize}
+\item Pontos de origem/destino (\emph{geocoding}).
+\item Horário de partida.
+\end{itemize}
+Recebe (JSON) e mostra o resultado da busca.
+\begin{itemize}
+\item No mapa (diferenciando rotas por cor) (Google Maps).
+\item Sequência de passos.
+\end{itemize}
+}
+
+\frame
+{
+\frametitle{Interface do Cliente \emph{Web}}
+\includegraphics[width=1\textwidth]{./imgs/clienteweb.png}
 
 }
