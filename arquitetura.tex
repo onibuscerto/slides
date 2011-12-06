@@ -100,11 +100,21 @@ Importação e mapeamento dos arquivos GTFS para o banco de dados.
 \frame
 {
 \frametitle{\emph{Web Service}}
-oi.
+Servlets responsáveis por executar consultas na base de dados construída através do Importer.
+
+\begin{enumerate}
+\item Recebimento dos pontos do Cliente.
+\item Criação dos nós de origem e destino no banco de dados.
+\item Criação de conexões a pé entre os origem e destino e todas as paradas.
+\item Execução da consulta de caminho mínimo no grafo através de \texttt{DatabaseController}.
+\item Serialização do resultado da consulta para formato JSON.
+\item Envio do resultado ao Cliente.
+\end{enumerate}
 }
 
 \subsection{Cliente}
 \frame
 {
-oi.
+\frametitle{Cliente \emph{Web}}
+
 }
