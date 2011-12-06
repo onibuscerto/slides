@@ -7,6 +7,7 @@
 	\item Equipe de três integrantes.
 	\item Diferente disponibilidade de horários.
 	\item Diferentes conjuntos de habilidades.
+	\item Diferentes sistemas operacionais.
 	\item Complexidade do projeto.
 	\item \emph{Software} livre.
 \end{itemize}
@@ -87,12 +88,18 @@
 \frame
 {
 \frametitle{Sistema Gerenciador de Banco de Dados}
-% TODO: melhorar essa tabela, especificar qual SGBD a gente escolheu de alguma forma
+\begin{itemize}
+	\item Bancos de dados relacionais são inadequados para este caso.
+	\item Solução: Bancos de dados de grafos.
+\end{itemize}
 \begin{table}[!htb]
 	\centering
-	\tiny
+	\setlength{\tabcolsep}{2pt}
+	\scriptsize
 	\caption{Comparação entre as opções de SGBDs disponíveis}
-	\begin{tabular}{lcccc}
+	\newcolumntype{C}{c}
+	\only<2->{\newcolumntype{C}{>{\columncolor{blue!10}}c}}
+	\begin{tabular}{lccCc}
 		\hline
 		& \textbf{HyperGraphDB} & \textbf{InfoGrid} & \textbf{Neo4j} & \textbf{OrientDB} \\
 		\hline
@@ -181,4 +188,16 @@
 \frame
 {
 \frametitle{Testes e Cobertura de Código}
+\begin{columns}[c]
+\column{1.5in}
+	\begin{figure}
+		\includegraphics[width=\textwidth]{./imgs/testes.png}
+		\caption{JUnit}
+	\end{figure}
+\column{1.5in}
+	\begin{figure}
+		\includegraphics[width=\textwidth]{./imgs/cobertura.png}
+		\caption{Cobertura}
+	\end{figure}
+\end{columns}
 }

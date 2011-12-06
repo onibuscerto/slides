@@ -1,11 +1,13 @@
 \documentclass{beamer}
 %\usepackage{beamerthemeBerkeley}
+\usepackage{colortbl}
 % Use either the one above or the one below
 \usetheme{Darmstadt}
 \usepackage[brazil]{babel}
 \usepackage[utf8]{inputenc}
 
 \setbeamertemplate{footline}[page number]
+\setbeamertemplate{navigation symbols}{}
 
 \title{Planejador de Rotas com \\ Sistema de Transporte Público}
 \author{Bruno Weingraber \\ Lucas Campiolo Paiva \\ Luiz Gustavo Cardoso Ribeiro \\ ~ \\ Orientador: Murilo V. G. da Silva}
@@ -16,8 +18,8 @@
 {
 	\begin{frame}
 		\frametitle{\insertsectionhead}
-		\tableofcontents[currentsection]
 		\setcounter{tocdepth}{1}
+		\tableofcontents[currentsection]
 	\end{frame}
 }
 
@@ -25,11 +27,11 @@
 
 \frame{\titlepage}
 
-%\section{}
-
-\frame{
-\tableofcontents
+\frame
+{
+\frametitle{Apresentação}
 \setcounter{tocdepth}{1}
+\tableofcontents
 }
 
 \input{introducao.tex}
