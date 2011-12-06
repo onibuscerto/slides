@@ -26,7 +26,7 @@ Divisão do código em 4 módulos visando o desenvolvimento distribuído:
 \frame
 {
 \frametitle{\emph{Core}}
-Contém as representações das entidades do sistema.
+Contém as representações das entidades do sistema:
 \begin{itemize}
 \item Vértices
 \item Relações
@@ -102,11 +102,11 @@ Importação e mapeamento dos arquivos GTFS para o banco de dados.
 \frametitle{Algoritmo principal do \emph{Importer}}
 \begin{enumerate}
 	\item Instanciar \texttt{EntidadeFactory} através da referência à \texttt{DatabaseController}.
-	\item Iniciar leitura do arquivo GTFS corresnpondente a \texttt{Entidade}, sendo que o caminho ao arquivo em questão é fornecido como parâmetro do algoritmo.
+	\item Iniciar leitura do arquivo GTFS correspondente à \texttt{Entidade}, sendo que o caminho ao arquivo em questão é fornecido como parâmetro do algoritmo.
 	\item Criar nova \texttt{Entidade} através da \texttt{EntidadeFactory} com base nos dados contidos na linha atual do arquivo GTFS.
 	\item Adicionar à \texttt{Entidade} criada no passo 3 seus atributos especificados na linha atual.
 	\item Se ainda existir linhas não lidas no arquivo GTFS, ler a próxima linha e voltar ao passo 3.
-	\item Caso contrário, fim da importação.
+	\item Caso contrário, finalizar a importação.
 \end{enumerate}
 }
 
@@ -119,7 +119,7 @@ Servlets responsáveis por executar consultas na base de dados construída atrav
 \begin{enumerate}
 \item Recebimento dos pontos do Cliente.
 \item Criação dos nós de origem e destino no banco de dados.
-\item Criação de conexões a pé entre os origem e destino e todas as paradas.
+\item Criação de conexões a pé entre os nós de origem e destino e todas as paradas.
 \item Execução da consulta de caminho mínimo no grafo através de \texttt{DatabaseController}.
 \item Serialização do resultado da consulta para formato JSON.
 \item Envio do resultado ao Cliente.
