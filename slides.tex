@@ -17,6 +17,7 @@
 	\begin{frame}
 		\frametitle{\insertsectionhead}
 		\tableofcontents[currentsection]
+		\setcounter{tocdepth}{1}
 	\end{frame}
 }
 
@@ -26,7 +27,10 @@
 
 %\section{}
 
-\frame{\tableofcontents}
+\frame{
+\tableofcontents
+\setcounter{tocdepth}{1}
+}
 
 \input{introducao.tex}
 \input{fundamentacao.tex}
