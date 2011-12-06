@@ -7,6 +7,7 @@
 	\item Equipe de três integrantes.
 	\item Diferente disponibilidade de horários.
 	\item Diferentes conjuntos de habilidades.
+	\item Diferentes sistemas operacionais.
 	\item Complexidade do projeto.
 	\item \emph{Software} livre.
 \end{itemize}
@@ -88,11 +89,17 @@
 {
 \frametitle{Sistema Gerenciador de Banco de Dados}
 % TODO: melhorar essa tabela, especificar qual SGBD a gente escolheu de alguma forma
+\begin{itemize}
+	\item Bancos de dados relacionais são inadequados.
+	\item Bancos de dados para grafos.
+\end{itemize}
 \begin{table}[!htb]
 	\centering
 	\tiny
 	\caption{Comparação entre as opções de SGBDs disponíveis}
-	\begin{tabular}{lcccc}
+	\newcolumntype{C}{c}
+	\only<2->{\newcolumntype{C}{>{\columncolor{red!10}}c}}
+	\begin{tabular}{lccCc}
 		\hline
 		& \textbf{HyperGraphDB} & \textbf{InfoGrid} & \textbf{Neo4j} & \textbf{OrientDB} \\
 		\hline
