@@ -43,7 +43,68 @@ Interface para centralizar o acesso ao banco de dados.
 \begin{itemize}
 \item Inicia e finaliza transações.
 \item Abstração da conexão entre sistema e BD.
+\item Referência às \emph{factories}.
+\item Algoritmo de busca do caminho mínimo.
 \end{itemize}
 }
 
+\subsection{Importer}
+\frame
+{
+\frametitle{\emph{GTFS Importer}}
+Importação e mapeamento dos arquivos GTFS para o banco de dados.
+\begin{itemize}
+\item Utiliza métodos do \emph{Core}.
+\item Cria relações entre as entidades.
+\end{itemize}
 
+
+\begin{center}
+	\scriptsize
+	\begin{tabular}{ll}
+		\hline
+		\textbf{Arquivo} & \textbf{Campos Obrigatórios} \\
+		\hline
+		\textbf{Route} & \emph{route ID}: identifica um trajeto \\
+				    & \emph{short name}: nome abreviado de um trajeto \\
+				    & \emph{long name}: nome completo de um trajeto \\
+		\textbf{Trip} & \emph{trip ID}: identifica uma viagem \\ 
+				& \emph{route ID} \\ 
+				& \emph{service ID}: disponibilidade do serviço por data \\
+		\textbf{Stop} & \emph{stop ID}: identifica uma parada ou estação \\
+				 & \emph{name}: nome de uma parada ou estação \\
+				 & \emph{latitude, longitude}: coordenadas geográficas da parada ou estação \\
+		\textbf{StopTime} & \emph{trip ID} \\
+				         & \emph{stop ID} \\
+				         & \emph{arrival/departure time}: tempo de chegada/partida em uma parada \\
+				         & \emph{stop sequence}: ordem das paradas de uma viagem \\
+		\hline
+	\end{tabular}
+\end{center}
+}
+
+\frame
+{
+\frametitle{Algoritmo principal do \emph{Importer}}
+\begin{enumerate}
+	\item Instanciar \texttt{EntidadeFactory} através da referência à \texttt{DatabaseController}.
+	\item Iniciar leitura do arquivo GTFS corresnpondente a \texttt{Entidade}, sendo que o caminho ao arquivo em questão é fornecido como parâmetro do algoritmo.
+	\item Criar nova \texttt{Entidade} através da \texttt{EntidadeFactory} com base nos dados contidos na linha atual do arquivo GTFS.
+	\item Adicionar à \texttt{Entidade} criada no passo 3 seus atributos especificados na linha atual.
+	\item Se ainda existir linhas não lidas no arquivo GTFS, ler a próxima linha e voltar ao passo 3.
+	\item Caso contrário, fim da importação.
+\end{enumerate}
+}
+
+\subsection{Web Service}
+\frame
+{
+\frametitle{\emph{Web Service}}
+oi.
+}
+
+\subsection{Cliente}
+\frame
+{
+oi.
+}
