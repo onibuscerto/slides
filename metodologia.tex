@@ -88,17 +88,17 @@
 \frame
 {
 \frametitle{Sistema Gerenciador de Banco de Dados}
-% TODO: melhorar essa tabela, especificar qual SGBD a gente escolheu de alguma forma
 \begin{itemize}
-	\item Bancos de dados relacionais são inadequados.
-	\item Bancos de dados para grafos.
+	\item Bancos de dados relacionais são inadequados para este caso.
+	\item Solução: Bancos de dados de grafos.
 \end{itemize}
 \begin{table}[!htb]
 	\centering
-	\tiny
+	\setlength{\tabcolsep}{2pt}
+	\scriptsize
 	\caption{Comparação entre as opções de SGBDs disponíveis}
 	\newcolumntype{C}{c}
-	\only<2->{\newcolumntype{C}{>{\columncolor{red!10}}c}}
+	\only<2->{\newcolumntype{C}{>{\columncolor{blue!10}}c}}
 	\begin{tabular}{lccCc}
 		\hline
 		& \textbf{HyperGraphDB} & \textbf{InfoGrid} & \textbf{Neo4j} & \textbf{OrientDB} \\
