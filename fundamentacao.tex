@@ -8,6 +8,7 @@
 \begin{block}{Definição}
 ``Um grafo é uma representação abstrata de um conjunto de objetos, onde alguns pares de objetos estão conectados por ligações.
 Os objetos representados por abstrações matemáticas chamadas vértices, e as ligações que conectam alguns dos pares de vértices são chamadas de arestas.''
+(http://en.wikipedia.org/wiki/Graph\_(mathematics), tradução própria)
 %TODO: ref wiki 
 \end{block}
 }
@@ -38,8 +39,8 @@ Os objetos representados por abstrações matemáticas chamadas vértices, e as 
 {
 \frametitle{Definição de rede Multimodal}
 \begin{block}{Definição}
-``Uma rede multimodal é um grafo com cujas arestas tem pesos, direção e modo. A direção determina que cada aresta tem um nó de origem e um nó de destino.
-Os pesos são valores positivos associados à cada aresta. Cada aresta tem também um modo associado dentre um conjunto finito de modos. Portanto, os modos particionam o conjunto das arestas.''
+Uma rede multimodal é um grafo cujas arestas tem pesos, direção e modo. A direção determina que cada aresta tem um nó de origem e um nó de destino.
+Os pesos são valores positivos associados à cada aresta. Cada aresta tem também um modo associado dentre um conjunto finito de modos. Portanto, os modos particionam o conjunto das arestas.
 \end{block}
 }
 
@@ -57,7 +58,7 @@ Os pesos são valores positivos associados à cada aresta. Cada aresta tem tamb�
 {
 \frametitle{Definição de Rede de Tranporte}
 \begin{block}{Definição}
-``Uma rede de transporte é uma rede multimodal onde as arestas, ao invés de pesos, tem dois valores, o tempo de partida e o tempo de chegada. Um caminho através de uma rede de transporte tem um horário inicial definido, e as arestas só podem ser atravessadas no tempo de partida, e só terminam de ser atravessadas no tempo de chegada.''
+Uma rede de transporte é uma rede multimodal onde as arestas, ao invés de pesos, tem dois valores, o tempo de partida e o tempo de chegada. Um caminho através de uma rede de transporte tem um horário inicial definido, e as arestas só podem ser atravessadas no tempo de partida, e só terminam de ser atravessadas no tempo de chegada.
 \end{block}
 }
 
@@ -87,4 +88,16 @@ Os pesos são valores positivos associados à cada aresta. Cada aresta tem tamb�
 	\item Caminho que resulta no horário mínimo de chegada.
 	\end{itemize}
 \end{alertblock}
+}
+
+\frame
+{
+\frametitle{Algoritmo de Caminho Mínimo}
+Modificação do algoritmo de Dijkstra para contemplar restrições adicinais:
+	\begin{itemize}
+	\item Tabela de itinerários.
+	\item Tempo de espera.
+	\item Tratamento diferente de cada modo.
+	\item Tempo de ``folga'' em troca de modo ou serviço.
+	\end{itemize}
 }
