@@ -14,7 +14,12 @@ Divisão do código em 4 módulos visando o desenvolvimento distribuído:
 \frame
 {
 \frametitle{Visão geral do sistema}
-\includegraphics[width=1\textwidth]{./imgs/arquitetura.png}
+\begin{figure}
+\includegraphics[width=0.8\textwidth]{./imgs/arquitetura.png}
+\caption{Representação geral do sistema}
+		%TODO: ref
+\end{figure}
+
 }
 
 \subsection{Core}
@@ -26,14 +31,22 @@ Contém as representações das entidades do sistema.
 \item Vértices
 \item Relações
 \end{itemize}
-\includegraphics[width=1\textwidth]{./imgs/CoreDiagram.png}
+\begin{figure}
+\includegraphics[width=0.8\textwidth]{./imgs/CoreDiagram.png}
+\caption{Entidades do \emph{Core}}
+		%TODO: ref
+\end{figure}
+
 }
 
 \frame
 {
 \frametitle{\emph{Factories}}
 Interface para criação de entidades do \emph{Core}.
-\includegraphics[width=0.8\textwidth]{./imgs/grafoFactory.png}
+\begin{figure}
+\includegraphics[width=0.6\textwidth]{./imgs/grafoFactory.png}
+\caption{Representação de uma entidade no sistema}
+\end{figure}
 }
 
 \frame
@@ -59,8 +72,9 @@ Importação e mapeamento dos arquivos GTFS para o banco de dados.
 \end{itemize}
 
 
-\begin{center}
-	\scriptsize
+\begin{table}
+	\tiny
+	\caption{Campos obrigatórios a serem importados}
 	\begin{tabular}{ll}
 		\hline
 		\textbf{Arquivo} & \textbf{Campos Obrigatórios} \\
@@ -80,7 +94,7 @@ Importação e mapeamento dos arquivos GTFS para o banco de dados.
 				         & \emph{stop sequence}: ordem das paradas de uma viagem \\
 		\hline
 	\end{tabular}
-\end{center}
+\end{table}
 }
 
 \frame
@@ -131,6 +145,8 @@ Recebe (JSON) e mostra o resultado da busca.
 \frame
 {
 \frametitle{Interface do Cliente \emph{Web}}
+\begin{figure}
 \includegraphics[width=1\textwidth]{./imgs/clienteweb.png}
-
+\caption{Interface do cliente \emph{web}}
+\end{figure}
 }
